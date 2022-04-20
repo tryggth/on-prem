@@ -40,6 +40,6 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - name: Echo Environment
-      run: echo ${{ github.event.inputs.env_to_promote_to }}
+      run: echo ${{ github.event.inputs.env_to_promote_to || 'qa' }}
     - name: Send greeting
       run: echo "Hello ${{ github.event.inputs.name }}"
