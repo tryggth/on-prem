@@ -15,7 +15,7 @@ on:
         type: environment
         # Friendly description to be shown in the UI instead of 'name'
         description: 'Environment to deploy to'
-        default: 'staging'
+        default: 'qa'
         # Input has to be provided for the workflow to run
         required: true
       name:
