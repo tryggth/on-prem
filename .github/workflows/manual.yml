@@ -34,10 +34,12 @@ jobs:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     environment:
-      name: env_to_promote_to
+      name: ${{ github.event.inputs.env_to_promote_to }}
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Runs a single command using the runners shell
+    - name: Echo Environment
+      run: echo ${{ github.event.inputs.env_to_promote_to }}
     - name: Send greeting
       run: echo "Hello ${{ github.event.inputs.name }}"
