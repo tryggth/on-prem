@@ -43,3 +43,5 @@ jobs:
       run: echo ${{ github.event.inputs.env_to_promote_to || 'qa' }}
     - name: Send greeting
       run: echo "Hello ${{ github.event.inputs.name }}"
+    - name: List contents
+      run: ls -laR /
